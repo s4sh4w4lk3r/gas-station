@@ -3,8 +3,10 @@
     internal class Program
     {
         static void Main(string[] args)
+
         {
-            Console.WriteLine("Hello, World!");
+            new GasContext().Database.EnsureDeleted();
+            new GasContext().Database.EnsureCreated();
         }
     }
 }
